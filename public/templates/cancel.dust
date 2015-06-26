@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+
+{<body}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+              <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.text" /}</div>
+              <div class="paypal-panel-body">
+                {@pre type="content" key="panel.body.text" /}
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/body}

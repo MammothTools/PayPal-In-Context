@@ -1,0 +1,118 @@
+/* mammothjs - 
+ * Added "custom.css" for custom styles for this app.
+ */
+
+ /* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #333;
+}
+
+/* Navbar Styles for this project
+------------------------------------------------- */
+.spacer {
+	margin-top: 60px;
+}
+
+.navbar-default {
+	background-color: #333;
+	border-color: #333;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	color: #fff;
+	background-color: #555;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #fff;
+	background-color: #555;
+}
+
+.loading {
+    background: no-repeat url("../images/loading.gif");
+    background-size: 150px 100px;
+    margin-left: 40%;
+    width: 150px;
+    height: 100px;
+    z-index: 10;
+}
+
+.paypal-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #1A1A1A;
+    border-radius: 6px;
+}
+.paypal-panel-heading {
+    color: #fff;
+    font-weight: bold;
+    background-color: #003087;
+    border: 1px solid #1A1A1A;
+    padding: 10px 15px;
+}
+
+.paypal-panel-body {
+    padding: 15px;
+}
+
+.paypal-sunrise-bg {
+    background-color: #FF8F1C;
+}
+
+.paypal-fuchsia-bg {
+    background-color: #B0008E;
+}
+
+.paypal-mint-bg {
+    background-color: #7AE1BF;
+}
+
+.paypal-pay-blue-bg {
+    background-color: #003087;
+}
+
+.paypal-pal-blue-bg {
+    background-color: #009CDE;
+}
+
+.paypal-gray-bg {
+    background-color: #99999A;
+}
+
+.paypal-sunrise-text {
+    color: #FF8F1C;
+}
+
+.paypal-fuchsia-text {
+    color: #B0008E;
+}
+
+.paypal-mint-text {
+    color: #7AE1BF;
+}
+
+.paypal-pay-blue-text {
+    color: #003087;
+}
+
+.paypal-pal-blue-text {
+    color: #009CDE;
+}
+
+.paypal-gray-text {
+    color: #99999A;
+}

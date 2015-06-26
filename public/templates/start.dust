@@ -1,0 +1,84 @@
+{>"layouts/master" /}
+
+{<body}
+<div class="container">
+<div ng-controller="paypalCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+            <div class="paypal-panel-heading">{@pre type="content" key="panel.token.heading.text" /}</div>
+                <div class="paypal-panel-body">
+                <a href="#" role="button" class="btn btn-primary" ng-click="paypalService.getToken()">Get OAuth Token</a>
+                <div class="spacer"></div>
+                    <div id="tokenSuccess" style="display: none;">
+                    <div class="spacer"></div>
+                        <div class="well">
+                            <div style="display: none;" id="tokenSuccessSpinner" class="loading"></div>
+                            <div style="display: none;" id="tokenSuccessText">
+                                <pre>Request Success: [[paypalService.tokenSuccess]]</pre>
+                                <pre>API Response: [[paypalService.tokenResponse]]</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="genAuth" style="display: none;" class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+            <div class="paypal-panel-heading">{@pre type="content" key="panel.auth.heading.text" /}</div>
+                <div class="paypal-panel-body">
+                <a href="#" role="button" class="btn btn-primary" ng-click="paypalService.generateAuthRequest()">Generate Default Auth Request</a>
+                    <div id="genAuthRequest" style="display: none;">
+                    <div class="spacer"></div>
+                    <div class="well">
+                        <div style="display: none;" id="genAuthRequestSpinner" class="loading"></div>
+                            <div style="display: none;" id="genAuthRequestText">
+                                <pre>[[paypalService.authRequest | json]]</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="auth" style="display: none;" class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+              <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.text" /}</div>
+              <div class="paypal-panel-body">
+              <a href="#" role="button" class="btn btn-primary" ng-click="paypalService.authorize()">Create PayPal EC Token</a>
+              
+                <div id="authRequest" style="display: none;">
+                <div class="spacer"></div>
+                    <div class="well">
+                        <div style="display: none;" id="authRequestSpinner" class="loading"></div>
+                            <div style="display: none;" id="authRequestText">
+                                <pre>Redirect URL: [[paypalService.authResponse]]</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="buttonArea" style="display: none;">
+                <div class="spacer"></div>
+                    <form id="myContainer" method="post" action="/checkout">
+                    <input type="hidden" name="token" value="[[paypalService.authResponse]]" />
+                    <input type="hidden" name="_csrf" value={_csrf} />
+                    </form>
+                    <script>
+                          window.paypalCheckoutReady = function () { 
+                            paypal.checkout.setup('<Your_Merchant_ID>', {
+                                container: 'myContainer'
+                              }); 
+                          };
+                    </script>
+                    <script src="//www.paypalobjects.com/api/checkout.js" async></script>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/body}
+

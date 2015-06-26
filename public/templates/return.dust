@@ -1,0 +1,76 @@
+{>"layouts/master" /}
+
+{<body}
+<div class="container">
+<div ng-controller="paypalCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+              <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.text" /}</div>
+              <div class="paypal-panel-body">
+                {@pre type="content" key="panel.body.text" /}
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+              <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.queryParams.text" /}</div>
+              <div class="paypal-panel-body">
+                <div class="well">
+                <pre>Payment ID: [[queryParams.paymentId]]</pre>
+                <pre>Token: [[queryParams.token]]</pre>
+                <pre>PayerID: [[queryParams.PayerID]]</pre>
+                </div>
+                <div class="spacer"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+            <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.ecdetails.text" /}</div>
+                <div class="paypal-panel-body">
+                <a href="#" role="button" class="btn btn-primary" ng-click="paypalService.getDetails(queryParams.paymentId)">Get EC Details</a>
+                    <div id="getECResponse" style="display: none;">
+                    <div class="spacer"></div>
+                        <div class="well">
+                            <div style="display: none;" id="getECResponseSpinner" class="loading"></div>
+                            <div style="display: none;" id="getECResponseText">
+                                <pre>Request Success: [[paypalService.getECResponseSuccess]]</pre>
+                                <pre>API Response: [[paypalService.getECResponse | json]]</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="executePayment" style="display: none;" class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+            <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.execute.text" /}</div>
+                <div class="paypal-panel-body">
+                <a href="#" role="button" class="btn btn-primary" ng-click="paypalService.executePayment(queryParams)">Execute Payment</a>
+                    <div id="executePaymentResponse" style="display: none;">
+                    <div class="spacer"></div>
+                        <div class="well">
+                            <div style="display: none;" id="executePaymentResponseSpinner" class="loading"></div>
+                            <div style="display: none;" id="executePaymentResponseText">
+                                <pre>Request Success: [[paypalService.executePaymentResponseSuccess]]</pre>
+                                <pre>API Response: [[paypalService.executePaymentResponse | json]]</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{/body}
+
