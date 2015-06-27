@@ -1,0 +1,42 @@
+{
+  "name": "PayPalInContext",
+  "main": "server.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/MammothTools/PayPal-In-Context",
+  "authors": [
+    "mammothjs <mammothjs@gmail.com>"
+  ],
+  "description": "PayPal Express Checkout In-Context Example",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "dustjs",
+    "jquery",
+    "requirejs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.1",
+    "angular-sanitize": "~1.4.1",
+    "angular": "~1.4.1",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "dustjs-linkedin-helpers": "~1.2.0",
+    "dustjs-linkedin": "~2.3.0",
+    "requirejs": "^2.1.11"
+  }
+}
