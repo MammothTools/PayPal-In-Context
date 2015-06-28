@@ -42,3 +42,5 @@ Now go back to the command line and run the command:
 ```sh
 nodemon server.js
 ```
+
+## This Example is provided under the MIT License, see [LICENSE.md](https://github.com/MammothTools/PayPal-In-Context/blob/master/LICENSE.md) for details.
