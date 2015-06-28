@@ -4,7 +4,7 @@
         <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>PayPal Checkout</h1> <a href="/start"><button type="button" class="btn btn-primary">Show me the Example!</button></a>
+        <h1>PayPal Checkout</h1> <a href="/start"><button type="button" class="btn btn-primary">Walk me through it!</button></a>
       </div>
       <p class="lead">The new PayPal Checkout is pretty fancy, it provides an In-Context experience that helps customers breeze through checkout without ever leaving your site.</p>
       <img src="images/in-context.png" alt="PayPal In-Context" class="img-rounded" />

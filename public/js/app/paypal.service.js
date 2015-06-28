@@ -97,6 +97,7 @@ angular.module('PayPalInContext')
                 paypal.executePaymentResponse = response;
                 paypal.executePaymentResponseSuccess = true;
               $('#executePaymentResponseText').show();
+              $('#exampleComplete').show();
             }).
             error(function(response){
                 console.log(response);

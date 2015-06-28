@@ -70,6 +70,17 @@
             </div>
         </div>
     </div>
+
+    <div id="exampleComplete" style="display: none;" class="row">
+        <div class="col-md-12">
+            <div class="paypal-panel panel-paypal">
+            <div class="paypal-panel-heading">{@pre type="content" key="panel.heading.done.text" /}</div>
+                <div class="paypal-panel-body">
+                    <p>{@pre type="content" key="paypal.done.body.text" /}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 {/body}
